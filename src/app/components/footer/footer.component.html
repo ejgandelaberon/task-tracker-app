@@ -1,0 +1,36 @@
+<div class="button-container">
+    <button pButton pRipple icon="pi pi-cog" label="Settings" (click)="settings()" class="p-button-raised p-button-help"></button>
+    <button pButton pRipple icon="pi pi-sign-out" label="Log Out" (click)="logout()" class="p-button-raised p-button-danger"></button>
+</div>
+
+<footer>
+    <p>&copy; ejgandelaberon</p>
+</footer>
+
+<p-dialog
+    [(visible)]="display"
+    [style]="{width: '500px'}"
+    [modal]="true"
+    [draggable]="false"
+    [resizable]="false"
+    (onHide)="reset()"
+>
+    <ng-template pTemplate="header">
+        SETTINGS
+    </ng-template>
+
+    <p-divider>App Name</p-divider>
+
+    <div class="dialog-content">
+        <div class="p-inputgroup">
+            <button type="button" (click)="updateAppName(newTitle)" pButton pRipple label="Change App Name"></button>
+            <input type="text" pInputText [(ngModel)]="newTitle" placeholder="Task Tracker App">         
+        </div>
+
+        <button (click)="defaultAppName()" pButton pRipple label="Restore default name" id="btn-restore"></button>
+    </div>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple (click)="display=false" label="Cancel" class="p-button-secondary" autofocus></button>
+    </ng-template>
+</p-dialog>

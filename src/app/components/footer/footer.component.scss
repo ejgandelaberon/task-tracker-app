@@ -1,0 +1,34 @@
+.button-container button {
+    margin: 6px;
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+}
+
+::ng-deep .p-dialog .p-dialog-footer {
+    padding-top: 1rem;
+}
+
+.dialog-content {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.dialog-content button {
+    margin-top: 1rem;
+}
+
+.dialog-content input {
+    margin-top: 1rem;
+}
+
+.dialog-content button#btn-restore {
+    width: 100%;
+}

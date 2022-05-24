@@ -1,4 +1,8 @@
 <div class="container">
-  <h1>{{ title }}</h1>
-  <h3>Welcome, EJ!</h3>
+    <app-header></app-header>
+    <p-divider align="center"><p-tag severity="info" value="Tasks" [rounded]="true"></p-tag></p-divider>
+    <app-tasks></app-tasks>
+    <p-divider></p-divider>
+    <app-footer></app-footer>
 </div>
+<p-toast></p-toast>
